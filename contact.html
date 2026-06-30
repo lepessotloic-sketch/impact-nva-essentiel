@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Impact-NVA</title>
+  <meta name="description" content="Contactez Impact-NVA pour créer votre site de paysagiste." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a075d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <!-- Header: display the provided logo image instead of the plain text brand. -->
+        <a href="index.html" class="logo-link">
+          <img src="logo sans fond.png" alt="Impact-NVA" style="height:50px; width:auto;" />
+        </a>
+      </div>
+      <nav class="navigation" id="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="offer.html">Offre</a></li>
+          <li><a href="examples.html">Exemples</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+          <span class="fas fa-bars"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="why" style="padding-top:4rem;">
+    <div class="container" style="max-width:700px;">
+      <h2>Contactez-nous</h2>
+      <p style="text-align:center; margin-bottom:2rem;">
+        Remplissez le formulaire ci-dessous. Après validation, nous vous accompagnons pour acheter votre nom de domaine OVH et préparer la mise en ligne GitHub Pages.
+      </p>
+
+      <form
+        action="https://n8n.srv1677224.hstgr.cloud/webhook/nouveau-prospect"
+        method="POST"
+        style="display:flex; flex-direction:column; gap:1rem;"
+      >
+        <div>
+          <label for="name">Nom de l'entreprise :</label><br />
+          <input
+            type="text"
+            id="name"
+            name="Entreprise"
+            required
+            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
+          >
+        </div>
+
+        <div>
+          <label for="email">Email :</label><br />
+          <input
+            type="email"
+            id="email"
+            name="E-mail"
+            required
+            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
+          >
+        </div>
+
+        <div>
+          <label for="phone">Téléphone :</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="Téléphone"
+            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
+          >
+        </div>
+
+        <div>
+          <label for="city">Ville :</label><br />
+          <input
+            type="text"
+            id="city"
+            name="Ville"
+            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
+          >
+        </div>
+
+        <div>
+          <label for="website">Site web (optionnel) :</label><br />
+          <input
+            type="url"
+            id="website"
+            name="Site"
+            placeholder="https://monsite.fr"
+            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
+          >
+        </div>
+
+        <div>
+          <label for="message">Message :</label><br />
+          <textarea
+            id="message"
+            name="Notes"
+            rows="5"
+            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
+          ></textarea>
+        </div>
+
+        <div style="background:#f4fbf8; border-left:4px solid #00695c; padding:1rem; border-radius:6px;">
+          <strong>À savoir :</strong> le nom de domaine est acheté chez OVH à votre nom, pour environ 10 à 15 €/an. L’hébergement GitHub Pages est offert par Impact-NVA.
+        </div>
+
+        <!-- Champs automatiques -->
+        <input type="hidden" name="Statut" value="Nouveau">
+        <input type="hidden" name="Réponse" value="Non contacté">
+
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
+          Envoyer
+        </button>
+      </form>
+
+      <div style="margin-top:2rem;">
+        <!-- Contact information: only email and zone remain. Indicate that all requests go through the contact form. -->
+        <p>Email : <a data-email href="#">contact@impact-nva.fr</a></p>
+        <p><small>Zone : <span data-zone>France</span></small></p>
+        <p style="margin-top:0.5rem; font-size:0.9rem;">Toutes les demandes passent par le formulaire de contact.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4><span data-brand>Impact-NVA</span></h4>
+        <p>La visibilité digitale pour les paysagistes : un site clair, pro, et prêt à recevoir des demandes.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="offer.html">Offre</a></li>
+          <li><a href="examples.html">Exemples</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Votre site</h4>
+        <p>💳 Paiement sécurisé Stripe</p>
+        <p>🚀 Hébergement offert via GitHub Pages</p>
+        <p>🌐 Domaine OVH à votre nom : environ 10 à 15 €/an</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email : <a data-email href="#">contact@impact-nva.fr</a></p>
+        <p><small>Zone : <span data-zone>France</span></small></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 <span data-brand>Impact-NVA</span>. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="js/config-apply.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
