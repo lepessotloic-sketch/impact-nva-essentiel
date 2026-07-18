@@ -8,9 +8,6 @@ window.siteConfig = {
   // Paste here your Stripe Payment Link / Checkout URL
   // Example: https://buy.stripe.com/xxxxxxxxxxxx
   stripeCheckoutUrl: "https://buy.stripe.com/3cI8wO6QT6tj0T93FRbo401",
-  googleRating: "4,9",
-  googleCount: "226",
-  googleLink: "https://g.page/novadigitale?share",
   email: "contact@impact-nva.fr",
   // No phone number displayed on the site. Leave empty as all requests go through the contact form.
   phone: "",
