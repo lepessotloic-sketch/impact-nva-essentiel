@@ -1,12 +1,9 @@
-// Apply the configuration values to the HTML via data attributes
+// Applique les valeurs de config.js dans le HTML via des attributs data-*
 document.addEventListener('DOMContentLoaded', () => {
   const cfg = window.siteConfig || {};
   const mapping = {
     'brand': 'brand',
     'slogan': 'slogan',
-    'google-rating': 'googleRating',
-    'google-count': 'googleCount',
-    'google-link': 'googleLink',
     'email': 'email',
     'phone': 'phone',
     'zone': 'zone',
@@ -18,12 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nodes = document.querySelectorAll(`[data-${attr}]`);
     nodes.forEach(node => {
       if (!cfg[key]) return;
-      // For links we set both href and text if appropriate
-      if (attr === 'google-link') {
-        node.setAttribute('href', cfg[key]);
-        node.textContent = node.textContent || 'Voir les avis Google';
-      } else if (attr === 'stripe-link') {
-        if (!cfg[key]) return;
+      if (attr === 'stripe-link') {
         node.setAttribute('href', cfg[key]);
       } else if (attr === 'email') {
         node.setAttribute('href', `mailto:${cfg[key]}`);
