@@ -1,10 +1,23 @@
 /*
-  Style sheet for Nova Digitale – a modern, responsive landing page for landscaping professionals.
-  This CSS defines general resets, typography, layout containers, responsive navigation,
-  hero sections, grids, cards, call‑to‑action components and footer styling.
+  Impact-NVA — V1 Essentiel
+  Feuille de style : thème clair, vert de marque, accent or partagé avec V2/V3.
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --surface: #f7f9fa;
+  --ink: #333333;
+  --muted: #555555;
+  --green: #004d40;
+  --green-light: #00695c;
+  --green-dark: #002e27;
+  --gold: #d8b76a;
+  --gold-line: rgba(216, 183, 106, 0.45);
+  --white: #ffffff;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
 
 /* CSS Reset */
 * {
@@ -16,8 +29,8 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
+  color: var(--ink);
+  background-color: var(--bg);
 }
 
 a {
@@ -39,8 +52,9 @@ img {
 
 /* Header & Navigation */
 .site-header {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--gold);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -56,7 +70,7 @@ img {
 .logo-link {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #004d40;
+  color: var(--green);
 }
 
 .navigation ul {
@@ -72,7 +86,7 @@ img {
 }
 
 .navigation a:hover {
-  color: #00695c;
+  color: var(--gold);
 }
 
 .nav-toggle {
@@ -91,7 +105,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   overflow: hidden;
 }
 
@@ -119,7 +133,7 @@ img {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--white);
 }
 
 .hero-content p {
@@ -134,39 +148,54 @@ img {
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-weight: 600;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   margin-top: 0.5rem;
   text-align: center;
 }
 
 .btn-primary {
-  background-color: #00695c;
-  color: #ffffff;
+  background-color: var(--green-light);
+  color: var(--white);
 }
 
 .btn-primary:hover {
-  background-color: #004d40;
+  background-color: var(--green);
+  box-shadow: 0 0 0 2px var(--gold-line);
 }
 
 .btn-secondary {
-  background-color: #004d40;
-  color: #ffffff;
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .btn-secondary:hover {
-  background-color: #002e27;
+  background-color: var(--green-dark);
+  box-shadow: 0 0 0 2px var(--gold-line);
 }
 
 /* Why Section */
 .why {
   padding: 4rem 0;
-  background-color: #f7f9fa;
+  background-color: var(--surface);
 }
 
 .why h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.why h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 2px;
+  background-color: var(--gold);
 }
 
 .why-grid {
@@ -182,7 +211,7 @@ img {
 
 .why-item .icon {
   font-size: 2.5rem;
-  color: #00695c;
+  color: var(--green-light);
   margin-bottom: 1rem;
 }
 
@@ -193,7 +222,7 @@ img {
 
 .why-item p {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--muted);
 }
 
 /* Examples Section */
@@ -205,6 +234,19 @@ img {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.examples-preview h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 2px;
+  background-color: var(--gold);
 }
 
 .examples-grid {
@@ -238,7 +280,7 @@ img {
 
 /* Reviews Section */
 .reviews {
-  background-color: #f7f9fa;
+  background-color: var(--surface);
   padding: 4rem 0;
 }
 
@@ -258,11 +300,11 @@ img {
 }
 
 .google-stars {
-  color: #fdd835; /* golden star color */
+  color: var(--gold);
 }
 
 .google-link {
-  color: #00695c;
+  color: var(--green-light);
   text-decoration: underline;
   margin-left: 0.5rem;
   font-weight: 500;
@@ -275,7 +317,7 @@ img {
 }
 
 .review-card {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -283,7 +325,7 @@ img {
 }
 
 .review-card .stars {
-  color: #fdd835;
+  color: var(--gold);
   margin-bottom: 0.5rem;
 }
 
@@ -301,7 +343,7 @@ img {
 /* CTA Section */
 .cta-contact {
   padding: 4rem 0;
-  background-color: #ffffff;
+  background-color: var(--white);
   text-align: center;
 }
 
@@ -313,15 +355,16 @@ img {
 .cta-container p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: #555;
+  color: var(--muted);
 }
 
 /* Footer */
 .site-footer {
-  background-color: #004d40;
-  color: #ffffff;
+  background-color: var(--green);
+  color: var(--white);
   padding: 3rem 0 1rem;
   margin-top: 4rem;
+  border-top: 3px solid var(--gold);
 }
 
 .footer-grid {
@@ -335,6 +378,7 @@ img {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
+  color: var(--gold);
 }
 
 .footer-col p, .footer-col li, .footer-col a {
@@ -357,7 +401,7 @@ img {
 }
 
 .footer-col a:hover {
-  color: #80cbc4;
+  color: var(--gold);
 }
 
 .footer-bottom {
@@ -374,7 +418,7 @@ img {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    background-color: var(--white);
     flex-direction: column;
     align-items: center;
     display: none;
@@ -385,20 +429,20 @@ img {
   }
   .nav-toggle {
     display: block;
-    color: #004d40;
+    color: var(--green);
   }
 }
 
 /* Generic Section Styles */
 h1, h2, h3, h4 {
-  color: #004d40;
+  color: var(--green);
 }
 
 p {
-  color: #555;
+  color: var(--muted);
 }
 
 /* Override hero text colors to ensure readability on dark overlay */
 .hero-content h1, .hero-content p {
-  color: #ffffff;
+  color: var(--white);
 }
