@@ -1,179 +1,124 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
+<link rel="icon" type="image/png" href="assets/images/logo-impact.png" />
+<link rel="apple-touch-icon" href="assets/images/logo-impact.png" />
+<link rel="canonical" href="https://essentiel.impact-nva.fr/contact.html" />
+<meta name="theme-color" content="#07110d" />
+<link rel="stylesheet" href="assets/css/style.css?v=1" />
+<title>Contact – Commander mon site | Impact‑NVA V1 Essentiel</title>
+<meta name="description" content="Envoyez-nous les informations de votre activité. Vous recevez ensuite votre lien de paiement sécurisé par email." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Contact – Commander mon site | Impact‑NVA V1 Essentiel" />
+<meta property="og:description" content="Envoyez-nous les informations de votre activité. Vous recevez ensuite votre lien de paiement sécurisé par email." />
+<meta property="og:url" content="https://essentiel.impact-nva.fr/contact.html" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Contact – Commander mon site | Impact‑NVA V1 Essentiel" />
+<meta name="twitter:description" content="Envoyez nous les informations de votre activité. Vous recevez ensuite votre lien de paiement sécurisé par email." />
+</head><body>
+<header>
+  <a class="nav-logo" href="index.html"><img src="assets/images/logo-impact.png" alt="Impact‑NVA" class="logo-img"></a>
+  <nav class="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="offer.html">Offre</a>
+    <a href="examples.html">Exemples</a>
+    <a href="process.html">Process</a>
+    <a href="faq.html">FAQ</a>
+    <a class="active" href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Ouvrir le menu"><i class="fas fa-bars"></i></button>
+</header>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – Impact-NVA</title>
-  <meta name="description" content="Contactez Impact-NVA pour créer votre site de paysagiste." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a075d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-container">
-      <div class="logo">
-        <!-- Header: display the provided logo image instead of the plain text brand. -->
-        <a href="index.html" class="logo-link">
-          <img src="assets/images/logo-impact.png" alt="Impact-NVA" style="height:80px; width:auto;" />
-        </a>
-      </div>
-      <nav class="navigation" id="navigation">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="offer.html">Offre</a></li>
-          <li><a href="examples.html">Exemples</a></li>
-          <li><a href="process.html">Process</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
-          <span class="fas fa-bars"></span>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Contact Section -->
-  <section class="why" style="padding-top:4rem;">
-    <div class="container" style="max-width:700px;">
-      <h2>Contactez-nous</h2>
-      <p style="text-align:center; margin-bottom:2rem;">
-        Remplissez le formulaire ci-dessous. Après validation, nous vous accompagnons pour acheter votre nom de domaine OVH et préparer la mise en ligne GitHub Pages.
-      </p>
-
-      <form
-        action="https://n8n.srv1677224.hstgr.cloud/webhook/nouveau-prospect"
-        method="POST"
-        style="display:flex; flex-direction:column; gap:1rem;"
-      >
-        <div>
-          <label for="name">Nom de l'entreprise :</label><br />
-          <input
-            type="text"
-            id="name"
-            name="Entreprise"
-            required
-            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
-          >
-        </div>
-
-        <div>
-          <label for="email">Email :</label><br />
-          <input
-            type="email"
-            id="email"
-            name="E-mail"
-            required
-            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
-          >
-        </div>
-
-        <div>
-          <label for="phone">Téléphone :</label><br />
-          <input
-            type="tel"
-            id="phone"
-            name="Téléphone"
-            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
-          >
-        </div>
-
-        <div>
-          <label for="city">Ville :</label><br />
-          <input
-            type="text"
-            id="city"
-            name="Ville"
-            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
-          >
-        </div>
-
-        <div>
-          <label for="website">Site web (optionnel) :</label><br />
-          <input
-            type="url"
-            id="website"
-            name="Site"
-            placeholder="https://monsite.fr"
-            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
-          >
-        </div>
-
-        <div>
-          <label for="message">Message :</label><br />
-          <textarea
-            id="message"
-            name="Notes"
-            rows="5"
-            style="width:100%; padding:0.75rem; border:1px solid #ccc; border-radius:4px;"
-          ></textarea>
-        </div>
-
-        <div style="background:#f4fbf8; border-left:4px solid #00695c; padding:1rem; border-radius:6px;">
-          <strong>À savoir :</strong> le nom de domaine est acheté chez OVH à votre nom, pour environ 10 à 15 €/an. L’hébergement GitHub Pages est offert par Impact-NVA.
-        </div>
-
-        <!-- Champs automatiques -->
-        <input type="hidden" name="Statut" value="Nouveau">
-        <input type="hidden" name="Réponse" value="Non contacté">
-
-        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
-          Envoyer
-        </button>
-      </form>
-
-      <div style="margin-top:2rem;">
-        <!-- Contact information: only email and zone remain. Indicate that all requests go through the contact form. -->
-        <p>Email : <a data-email href="#">contact@impact-nva.fr</a></p>
-        <p><small>Zone : <span data-zone>France</span></small></p>
-        <p style="margin-top:0.5rem; font-size:0.9rem;">Toutes les demandes passent par le formulaire de contact.</p>
-      </div>
+<main>
+  <section class="section" style="padding-top:150px">
+    <div class="container center">
+      <div class="eyebrow">Contact</div>
+      <h1 class="section-title">Passons à l'étape suivante.</h1>
+      <p class="section-lead">Remplissez ce formulaire, vous recevez votre lien de paiement sécurisé par email dans la foulée.</p>
     </div>
   </section>
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h4><span data-brand>Impact-NVA</span></h4>
-        <p>La visibilité digitale pour les paysagistes : un site clair, pro, et prêt à recevoir des demandes.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
+
+  <section class="section compact">
+    <div class="container contact-section">
+      <div class="contact-details">
+        <h3>Ce qui va se passer</h3>
         <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="offer.html">Offre</a></li>
-          <li><a href="examples.html">Exemples</a></li>
-          <li><a href="process.html">Process</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li>1. Vous envoyez vos informations ci-contre.</li>
+          <li>2. Vous recevez votre lien de paiement Stripe par email.</li>
+          <li>3. Une fois payé, nous vous recontactons sous 24h pour récupérer logo et photos.</li>
+          <li>4. Votre site est en ligne sous 48h.</li>
+        </ul>
+        <h3 style="margin-top:24px">Coordonnées</h3>
+        <ul>
+          <li>Email : <a data-email href="#">contact@impact-nva.fr</a></li>
+          <li>Zone : <span data-zone>France</span></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Votre site</h4>
-        <p>💳 Paiement sécurisé Stripe</p>
-        <p>🚀 Hébergement offert via GitHub Pages</p>
-        <p>🌐 Domaine OVH à votre nom : environ 10 à 15 €/an</p>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Email : <a data-email href="#">contact@impact-nva.fr</a></p>
-        <p><small>Zone : <span data-zone>France</span></small></p>
-      </div>
+
+      <form id="contact-form" class="contact-form">
+        <input type="hidden" name="offre" value="V1 Essentiel">
+        <div class="hp-field"><label>Ne pas remplir</label><input type="text" name="site_web" tabindex="-1" autocomplete="off"></div>
+
+        <label for="entreprise">Nom de votre entreprise *</label>
+        <input type="text" id="entreprise" name="entreprise" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telephone">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone">
+
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" name="ville">
+
+        <label for="domaine">Avez-vous déjà un site actuel ?</label>
+        <input type="text" id="domaine" name="domaine" placeholder="Lien de votre site, ou « aucun »">
+
+        <label for="message">Un mot sur votre activité (optionnel)</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Envoyer ma demande</button>
+        <p class="form-status"></p>
+      </form>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 <span data-brand>Impact-NVA</span>. Tous droits réservés.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-col">
+      <h4><span data-brand>Impact-NVA</span></h4>
+      <p>La visibilité digitale pour les paysagistes : un site clair, pro, et prêt à recevoir des demandes.</p>
     </div>
-  </footer>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="offer.html">Offre</a></li>
+        <li><a href="examples.html">Exemples</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a data-email href="#">contact@impact-nva.fr</a></li>
+        <li>Zone : <span data-zone>France</span></li>
+        <li>Paiement sécurisé Stripe</li>
+        <li>Hébergement GitHub Pages offert</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 <span data-brand>Impact-NVA</span>. Tous droits réservés.</div>
+</footer>
 
-  <script src="config.js"></script>
-  <script src="js/config-apply.js"></script>
-  <script src="js/script.js"></script>
-</body>
-</html>
-
-
+<script src="config.js"></script>
+<script src="js/config-apply.js"></script>
+<script src="assets/js/main.js"></script>
+</body></html>
