@@ -130,6 +130,38 @@
     </div>
   </section>
 
+  <!-- Demande d'aperçu en libre-service : le prospect saisit trois champs et
+       reçoit par SMS un aperçu à son nom, généré automatiquement. -->
+  <section class="section" id="demo">
+    <div class="container center">
+      <h2 class="section-title">Voyez votre site avant de décider</h2>
+      <p class="section-lead">
+        Trois informations suffisent. Vous recevez par SMS un aperçu à votre nom,
+        en quelques minutes. Gratuit, sans engagement, et vous ne payez rien pour le voir.
+      </p>
+
+      <form id="demo-form" class="contact-form demo-form">
+        <div class="hp-field"><label>Ne pas remplir</label><input type="text" name="site_web" tabindex="-1" autocomplete="off"></div>
+
+        <label for="demo-entreprise">Nom de votre entreprise *</label>
+        <input type="text" id="demo-entreprise" name="entreprise" required autocomplete="organization" placeholder="Les Jardins de la Brie">
+
+        <label for="demo-ville">Votre ville *</label>
+        <input type="text" id="demo-ville" name="ville" required autocomplete="address-level2" placeholder="Coulommiers">
+
+        <label for="demo-telephone">Votre téléphone *</label>
+        <input type="tel" id="demo-telephone" name="telephone" required autocomplete="tel" placeholder="06 12 34 56 78">
+
+        <button type="submit">Voir mon aperçu gratuit</button>
+        <p class="form-status"></p>
+      </form>
+
+      <p class="demo-note">
+        Votre numéro sert uniquement à vous envoyer le lien de votre aperçu.
+      </p>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container center">
       <h2 class="section-title">Prêt à avoir un site qui travaille pour vous ?</h2>
