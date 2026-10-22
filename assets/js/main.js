@@ -78,14 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
     cfg.contactWebhookUrl || 'https://n8n.srv1677224.hstgr.cloud/webhook/nouveau-prospect',
     () => { window.location.href = 'merci.html'; }
   );
-
-  // Demande d'aperçu : la génération prend un moment, donc on ne redirige pas.
-  // On confirme sur place et le lien part par SMS une fois la page publiée.
-  brancherFormulaire('#demo-form', cfg.demoWebhookUrl, (form, status, button) => {
-    form.querySelectorAll('input, button').forEach(el => { el.disabled = true; });
-    status.className = 'form-status success';
-    status.textContent =
-      'C’est noté. Vous recevez le lien de votre aperçu par SMS dans quelques minutes.';
-    button.textContent = 'Demande envoyée';
-  });
 });
