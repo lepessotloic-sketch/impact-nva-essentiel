@@ -98,6 +98,12 @@
           Vous pourrez nous envoyer votre logo et vos photos de chantiers en réponse à notre message.
         </p>
 
+        <!-- Turnstile : cle de SITE, publique par nature, elle doit etre lisible ici.
+             La cle SECRETE ne vit que dans le credential n8n "Impact-NVA - Turnstile secret".
+             Un jeton ne vaut que 300 s ; refresh-expired/timeout le refabriquent tout seuls. -->
+        <div class="cf-turnstile" id="verif" data-sitekey="0x4AAAAAAF8Fa2WBlUY8qKIa"
+             data-theme="auto" data-refresh-expired="auto" data-refresh-timeout="auto"></div>
+
         <button type="submit">Envoyer ma demande</button>
         <p class="form-status"></p>
       </form>
@@ -137,5 +143,7 @@
 
 <script src="config.js"></script>
 <script src="js/config-apply.js"></script>
+<!-- Turnstile : verification anti-robot. Le script doit venir de cette URL exacte (doc Cloudflare). -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="assets/js/main.js"></script>
 </body></html>
