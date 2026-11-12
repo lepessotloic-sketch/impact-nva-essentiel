@@ -43,6 +43,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = form.querySelector('button[type="submit"]');
     const libelle = button.textContent;
 
+
+    /* ---------- Jeton anti-robot Turnstile ----------
+       Demande au moment de l'envoi, et pas avant. Un jeton ne vaut que 300
+       secondes : celui qui a ete fabrique a l'ouverture de la page est perime
+       quand le visiteur a fini d'ecrire. C'est arrive a Loic le 11/11/2026 sur
+       son propre formulaire : classe robot, aucun accuse.
+       On en redemande donc un frais ; au bout de six secondes on part SANS
+       jeton et c'est n8n qui tranche. La page ne bloque jamais personne.
+       Si le formulaire n'a pas de widget, lireJeton rend '' et rien ne change. */
+    const lireJeton = () => {
+      try {
+        if (window.turnstile && typeof window.turnstile.getResponse === 'function') {
+          const t = window.turnstile.getResponse('#verif');
+          if (t) return t;
+        }
+      } catch (err) { /* widget absent, pas encore rendu, ou en erreur */ }
+      const champ = form.querySelector('[name=cf-turnstile-response]');
+      return champ ? champ.value : '';
+    };
+
+    const jetonFrais = () => new Promise((resoudre) => {
+      if (!form.querySelector('.cf-turnstile')) { resoudre(''); return; }
+      const deja = lireJeton();
+      if (deja) { resoudre(deja); return; }
+      try {
+        if (!window.turnstile || typeof window.turnstile.reset !== 'function') { resoudre(''); return; }
+        window.turnstile.reset('#verif');
+      } catch (err) { resoudre(''); return; }
+      const debut = Date.now();
+      const guet = setInterval(() => {
+        const t = lireJeton();
+        if (t) { clearInterval(guet); resoudre(t); }
+        else if (Date.now() - debut > 6000) { clearInterval(guet); resoudre(''); }
+      }, 250);
+    });
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (form.querySelector('.hp-field input')?.value) return; // piège anti-spam
@@ -52,6 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
       button.disabled = true;
       status.className = 'form-status loading';
       status.textContent = 'Envoi en cours…';
+
+      /* Le jeton part sous la cle 'verif' : c'est ce que lit le pilote 21. */
+      payload.verif = await jetonFrais();
 
       try {
         const res = await fetch(url, {
