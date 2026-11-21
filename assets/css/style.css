@@ -176,3 +176,18 @@ footer{border-top:1px solid var(--line);padding:52px 24px 24px;background:#050b0
 .case-demo input{width:auto;margin:3px 0 0;flex:0 0 auto}
 .case-demo span{font-size:.92rem;line-height:1.5}
 .case-demo-note{margin:0 0 18px 28px;font-size:.82rem;color:var(--muted)}
+
+/* Bande partenaires (reprise de la Signature et du Prestige, 21/11/2026) */
+.partners{margin-top:34px;padding-top:26px;border-top:1px solid var(--line);text-align:center}
+.partners-label{color:var(--soft);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 20px}
+.partners-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px 56px;list-style:none;margin:0;padding:0}
+.partner{display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.85}
+.partner:first-child{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:4px 8px}
+.partner:first-child .partner-role{flex-basis:100%}
+.partner-github{width:32px;height:32px;color:var(--text)}
+.partner-name{font-weight:700;font-size:1.25rem;color:var(--text);line-height:1}
+.partner-img{height:28px;width:auto;object-fit:contain}
+.partner-stripe{height:37px}
+.partner-role{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.partners-domaine{margin:20px 0 0;color:var(--muted);font-size:.88rem}
+.footer-bottom a{color:inherit;text-decoration:underline}
