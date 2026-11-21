@@ -4,7 +4,7 @@
 window.siteConfig = {
   brand: "Impact-NVA",
   slogan: "La visibilité digitale pour les paysagistes",
-  description: "Impact-NVA crée des sites web professionnels pour paysagistes : visibilité, crédibilité et demandes de devis.",
+  description: "Impact-NVA crée des sites professionnels pour paysagistes et artisans : textes rédigés pour vous, démo offerte avant tout paiement.",
   stripeCheckoutUrl: "https://buy.stripe.com/3cI8wO6QT6tj0T93FRbo401",
 
   // Webhook n8n du formulaire de contact : il porte aussi les demandes de démo.
